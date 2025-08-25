@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.poli.lms.ReturnBookController">
+   <children>
+      <Text layoutX="50.0" layoutY="50.0" text="Return Book">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+
+      <VBox layoutX="50.0" layoutY="80.0" spacing="10.0">
+         <children>
+            <Label text="Member ID:" />
+            <TextField fx:id="MIDField" onKeyReleased="#memberIdFieldKeyPressed" />
+
+            <Label text="ISBN:" />
+            <TextField fx:id="ISBNField" onKeyReleased="#bookISBNKeyPressed" />
+
+            <Label text="Return Status:" />
+            <ComboBox fx:id="statusComboBox" prefWidth="200.0" />
+
+            <Button fx:id="returnBookBtn" text="Submit" onAction="#returnBookBtnHandler" />
+         </children>
+      </VBox>
+
+      <VBox fx:id="memberContainer" layoutX="400.0" layoutY="80.0" spacing="10.0" visible="false">
+         <children>
+            <Label text="Member Details:" />
+            <Text fx:id="memberName" text="Name" />
+            <Text fx:id="memberDepartment" text="Department" />
+            <Text fx:id="memberBorrowed" text="Borrowed Books" />
+         </children>
+      </VBox>
+
+      <VBox fx:id="bookContainer" layoutX="400.0" layoutY="250.0" spacing="10.0" visible="false">
+         <children>
+            <Label text="Book Details:" />
+            <Text fx:id="bookTitle" text="Title" />
+            <Text fx:id="bookAuthor" text="Author" />
+            <Text fx:id="bookAvailable" text="Available Copies" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

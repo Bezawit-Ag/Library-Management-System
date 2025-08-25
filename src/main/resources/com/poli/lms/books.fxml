@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="booksContainer"
+            styleClass="books-root"
+            prefHeight="681.0" prefWidth="876.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.poli.lms.BooksController">
+
+    <children>
+        <!-- Search bar at the top -->
+        <HBox layoutX="21.0" layoutY="10.0" spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+            <children>
+                <Label text="Search:" />
+                <TextField fx:id="searchField" promptText="Search by title, author, or ISBN" prefWidth="300.0" />
+            </children>
+        </HBox>
+
+        <!-- Books title and buttons -->
+        <VBox layoutX="21.0" layoutY="50.0" spacing="10" prefWidth="834.0">
+            <!-- Title -->
+            <Text text="Books">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Text>
+
+            <!-- Buttons aligned to the right -->
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <Button fx:id="deleteBtn" onAction="#deleteBookHandler" prefHeight="30.0" prefWidth="109.0" text="Delete">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                </Button>
+                <Button fx:id="addBookBtn" onAction="#addBookBtnHandler" prefHeight="30.0" prefWidth="102.0" text="Add">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                </Button>
+                <Button fx:id="editBtn" onAction="#editBtnHandler" prefHeight="30.0" prefWidth="109.0" text="Edit">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                </Button>
+            </HBox>
+
+            <!-- Books table -->
+            <TableView fx:id="booksTable" prefHeight="300.0" prefWidth="834.0">
+                <columns>
+                    <TableColumn fx:id="ISBNCol" prefWidth="75.0" text="ISBN" />
+                    <TableColumn fx:id="titleCol" prefWidth="107.0" text="Title" />
+                    <TableColumn fx:id="authorCol" prefWidth="220.0" text="Author" />
+                    <TableColumn fx:id="publishedDateCol" prefWidth="192.0" text="Published Date" />
+                    <TableColumn fx:id="availableCol" prefWidth="162.0" text="Available" />
+                    <TableColumn fx:id="donatedCol" prefWidth="100.0" text="Donated" />
+                    <TableColumn fx:id="donorNameCol" prefWidth="120.0" text="Donor Name" />
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- Borrowed Books section -->
+        <VBox layoutX="21.0" layoutY="430.0" spacing="10">
+            <Text text="Borrowed Books">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Text>
+            <TableView fx:id="borrowedBooksTable" prefHeight="210.0" prefWidth="834.0">
+                <columns>
+                    <TableColumn fx:id="borrowerMIDCol" prefWidth="75.0" text="MID" />
+                    <TableColumn fx:id="borrowerNameCol" prefWidth="189.0" text="Name" />
+                    <TableColumn fx:id="borrowedBookTitleCol" prefWidth="177.0" text="Title" />
+                    <TableColumn fx:id="borrowerIssueDateCol" prefWidth="160.0" text="Issue Date" />
+                    <TableColumn fx:id="borrowedBookISBNCol" prefWidth="155.0" text="ISBN" />
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>

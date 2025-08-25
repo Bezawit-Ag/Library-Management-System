@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.poli.lms.LoginController"
+            prefHeight="400" prefWidth="800" styleClass="login-root" stylesheets="@mainPage.css">
+
+    <StackPane AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+               AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <!-- Card Container -->
+        <BorderPane maxWidth="350" maxHeight="500" styleClass="login-card" StackPane.alignment="CENTER">
+            <center>
+                <VBox alignment="CENTER" spacing="15">
+
+                    <ImageView fx:id="logoImage" fitWidth="200" fitHeight="200" preserveRatio="true" pickOnBounds="true">
+                        <image>
+                            <Image url="file:/C:/Users/eyobl/Desktop/LMS%20Fixed/LMS/src/main/resources/com/poli/lms/BDU_Logo.png"/>
+                        </image>
+                    </ImageView>
+
+                    <Label text="BDU Library Login" styleClass="login-header" />
+
+                    <TextField fx:id="usernameField" promptText="Username" maxWidth="260" styleClass="login-input" />
+                    <PasswordField fx:id="passwordField" promptText="Password" maxWidth="260" styleClass="login-input" />
+
+                    <Button text="Login" onAction="#handleLogin" styleClass="login-button" />
+
+                    <Label fx:id="errorLabel" textFill="red" />
+
+                </VBox>
+            </center>
+        </BorderPane>
+
+    </StackPane>
+</AnchorPane>

@@ -1,0 +1,158 @@
+
+.login-root{
+    -fx-background-image: url("library.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-color: #1c1c1e; /* Fallback for dark theme */
+}
+
+/* ========== MAIN PAGE BACKGROUND ========== */
+.main-page-root {
+    -fx-background-color: #91aec4; /* Fallback if image fails */
+}
+
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+    -fx-border-radius: 10;
+    -fx-padding: 15 15 20 15;
+}
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+/* Table header */
+.table-view .column-header-background {
+    -fx-background-color: rgba(25, 69, 105, 0.98);
+    -fx-background-radius: 5;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Row styling */
+.table-row-cell {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: #5c6bc0;
+    -fx-text-fill: white;
+}
+
+/* ========== LOGIN CARD ========== */
+.login-card {
+    -fx-background-color: rgba(255, 255, 255, 0.30);
+    -fx-background-radius: 15;
+    -fx-padding: 30 40;
+    -fx-border-radius: 15;
+    -fx-border-color: rgba(255, 255, 255, 0.25);
+    -fx-border-width: 1.2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 20, 0.5, 0, 6);
+}
+
+/* ========== LOGIN HEADER ========== */
+.login-header, .sidebar-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-padding: 0 0 20 0;
+}
+
+/* ========== INPUT FIELDS ========== */
+.login-input {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+    -fx-background-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-radius: 8;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #d1d1d1;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-padding: 8 12;
+    -fx-pref-width: 260;
+    -fx-pref-height: 36;
+}
+
+.login-input:focused {
+    -fx-border-color: #3498db;
+}
+
+/* ========== LOGIN BUTTON ========== */
+.login-button {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25;
+    -fx-cursor: hand;
+    -fx-padding: 8 20;
+    -fx-pref-width: 160;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 10, 0.3, 0, 3);
+}
+
+.login-button:hover {
+    -fx-background-color: #e6e6e6;
+}
+
+/* ========== REMEMBER ME & LINKS ========== */
+.login-options {
+    -fx-text-fill: #bbbbbb;
+    -fx-font-size: 12px;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.hyperlink {
+    -fx-text-fill: #3498db;
+    -fx-font-size: 12px;
+}
+
+/* ========== GLASS SIDEBAR ========== */
+.glass-sidebar {
+    -fx-background-image:url("0.jpg");
+
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 16, 0.3, 0, 2);
+    -fx-padding: 30 20;
+}
+
+/* ========== SIDEBAR BUTTONS ========== */
+.glass-btn {
+    -fx-pref-width: 246px;
+    -fx-pref-height: 40px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 12;
+    -fx-background-color: rgba(57, 113, 159, 0.55);
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.18);
+    -fx-border-width: 1.0;
+    -fx-border-radius: 8;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.2, 0, 1);
+    -fx-cursor: hand;
+}
+
+.glass-btn:hover {
+    -fx-background-color: rgba(57, 113, 159, 0.85);
+}
+
+/* ========== CONTENT AREA ========== */
+.content-area {
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+}

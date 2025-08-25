@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="addBookContainer" prefHeight="598.0" prefWidth="678.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.poli.lms.AddBookController">
+   <children>
+      <VBox layoutX="56.0" layoutY="125.0" spacing="12.0">
+         <children>
+            <Label text="ISBN"/>
+            <TextField fx:id="ISBNField"/>
+            <Label text="Title"/>
+            <TextField fx:id="titleField"/>
+            <Label text="Author"/>
+            <TextField fx:id="authorField"/>
+            <Label text="Published Date"/>
+            <DatePicker fx:id="publishedDateField"/>
+            <Label text="Available"/>
+            <TextField fx:id="availableField"/>
+            <Button fx:id="addBtn" text="ADD" onAction="#addBookBtnHandler"/>
+         </children>
+      </VBox>
+      <HBox layoutX="50.0" layoutY="69.0">
+         <children>
+            <Text text="Add Book">
+               <font>
+                  <Font size="24.0"/>
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <Button fx:id="backToBooksBtn" layoutX="50.0" layoutY="21.0" text="Back To Books" onAction="#backToBooksBtnHandler">
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

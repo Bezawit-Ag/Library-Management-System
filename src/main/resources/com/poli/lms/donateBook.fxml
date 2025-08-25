@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.poli.lms.DonateBookController" prefWidth="700" prefHeight="500">
+    <VBox spacing="15" layoutX="30" layoutY="20">
+        <children>
+            <Label text="Donate a Book" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints minWidth="100"/>
+                    <ColumnConstraints minWidth="200"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="30"/>
+                    <RowConstraints minHeight="30"/>
+                    <RowConstraints minHeight="30"/>
+                    <RowConstraints minHeight="30"/>
+                </rowConstraints>
+                <children>
+                    <Label text="ISBN:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="isbnField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <Label text="Title:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <TextField fx:id="titleField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <Label text="Donor's Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <TextField fx:id="donorNameField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    <Label text="Quantity:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <TextField fx:id="numBooksField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                </children>
+            </GridPane>
+
+            <Button text="Submit Donation" onAction="#submitDonation" maxWidth="150"/>
+
+            <!-- ✅ Added label before the table -->
+            <Label text="List of Donated Books" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+            <TableView fx:id="donatedBooksTable" prefHeight="250">
+                <columns>
+                    <TableColumn fx:id="isbnCol" text="ISBN" prefWidth="100"/>
+                    <TableColumn fx:id="titleCol" text="Title" prefWidth="200"/>
+                    <TableColumn fx:id="donorCol" text="Donor" prefWidth="150"/>
+                    <TableColumn fx:id="quantityCol" text="Quantity" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </children>
+    </VBox>
+    <padding>
+        <Insets top="20" left="20" right="20" bottom="20" />
+    </padding>
+</AnchorPane>
